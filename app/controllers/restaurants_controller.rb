@@ -38,7 +38,7 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :city, :state, :zip_code, :category)
+    params.require(:restaurant).permit(:name, :address, :city, :state, :zip_code, :category, :description)
       # The last two (description and category are optional)
   end
 
