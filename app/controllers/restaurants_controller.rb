@@ -13,6 +13,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
+    @restaurant = Restaurant.new(restaurant_params)
 
     if @restaurant.save
       redirect_to @restaurant, notice: "Restaurant Successfully Added!"
