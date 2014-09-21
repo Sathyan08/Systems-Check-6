@@ -5,7 +5,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @reviews    = @restaurant.reviews
+    # @reviews    = @restaurant.reviews
   end
 
   def new
@@ -20,6 +20,7 @@ class RestaurantsController < ApplicationController
     else
       render action: 'new'
     end
+
   end
 
   def edit
@@ -35,6 +36,7 @@ class RestaurantsController < ApplicationController
       render :action => :edit
     end
   end
+
 
   private
 
