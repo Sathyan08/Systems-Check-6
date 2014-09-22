@@ -7,3 +7,12 @@
     <li>Category: <%= @restaurant.category %></li>
     <li>Description: <%= @restaurant.description %></li>
 </ul>
+
+
+<ul>
+  <% @reviews.each do |review|%>
+    <li>Reviewer: <%= review.reviewer %> - Rating: <%= review.rating %> : <%= review.body %>
+    <% end %>
+</ul>
+
+<a href="/restaurants/<%= @restaurant.id %>/reviews/new">Add a Review<a>

@@ -1,0 +1,25 @@
+New
+
+
+
+
+<%= form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
+  <p>
+    <%= f.label "Your Name" %><br>
+    <%= f.text_field :reviewer %>
+  </p>
+
+  <p>
+    <%= f.label "Rating on Scale from 1 to 5" %><br>
+    <%= f.text_field :rating %>
+  </p>
+
+
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
